@@ -21,12 +21,10 @@ end
 local url
 
 if game.PlaceId == 286090429 then
-    sendNotification("Notification", "Arsenal [" .. GameP .. "]")
     url = "https://raw.githubusercontent.com/JD-04/Tekkit/refs/heads/main/Arsenal"
 -- Add other games here as needed
 
 else
-    sendNotification("Notification", "Loading Aot:R Hub [" .. GameP .. "]")
     url = "https://api.luarmor.net/files/v3/loaders/705e7fe7aa288f0fe86900cedb1119b1.lua"
 end
 

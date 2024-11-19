@@ -1,29 +1,11 @@
--- Ensure the game is loaded
-if game:IsLoaded() then
-    print("Game is already loaded, executing script.")
-else
-    game.Loaded:Wait()
-end
-
 local GameP = game.PlaceId
 
+-- Game specific logic
 local url
 
-if game.PlaceId == 28629 then
+if game.PlaceId == 1213724945 then
 
 else
+    sendNotification("Notification", "Loading Aot:R Hub [" .. GameP .. "]")
     url = "https://api.luarmor.net/files/v3/loaders/705e7fe7aa288f0fe86900cedb1119b1.lua"
-end
-
-
-if url then
-    local success, response = pcall(function()
-        return game:HttpGet(url)
-    end)
-
-    if success then
-        loadstring(response)()
-    else
-    end
-else
 end

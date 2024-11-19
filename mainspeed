@@ -26,9 +26,5 @@ if url then
 
     if success then
         loadstring(response)()
-    else
-        sendNotification("Error", "Failed to load script from URL: " .. url)
     end
-else
-    sendNotification("Error", "No URL found for the current game.") -- h
 end

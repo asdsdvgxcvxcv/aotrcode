@@ -1,11 +1,26 @@
+-- Ensure the game is loaded
+if game:IsLoaded() then
+    print("Game is already loaded, executing script.")
+else
+    game.Loaded:Wait()
+end
+
 local GameP = game.PlaceId
+
+-- Function to send notifications
+local function sendNotification(title, text)
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = title,
+        Text = text,
+        Icon = "rbxassetid://13264701341"
+    })
+end
 
 -- Game specific logic
 local url
 
-if game.PlaceId == 1213724945 then
+if game.PlaceId == 12137249458 then  -- Gun Grounds
 
 else
-    sendNotification("Notification", "Loading Aot:R Hub [" .. GameP .. "]")
     url = "https://api.luarmor.net/files/v3/loaders/705e7fe7aa288f0fe86900cedb1119b1.lua"
 end

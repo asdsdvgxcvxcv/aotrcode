@@ -7,28 +7,15 @@ end
 
 local GameP = game.PlaceId
 
--- Function to send notifications
-local function sendNotification(title, text)
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = title,
-        Text = text,
-        Icon = "rbxassetid://13264701341"
-    })
-end
-
-
--- Game specific logic
 local url
 
-if game.PlaceId == 286090429 then
-    url = "https://raw.githubusercontent.com/JD-04/Tekkit/refs/heads/main/Arsenal"
--- Add other games here as needed
+if game.PlaceId == 28629 then
 
 else
     url = "https://api.luarmor.net/files/v3/loaders/705e7fe7aa288f0fe86900cedb1119b1.lua"
 end
 
--- Load and execute the script from the URL
+
 if url then
     local success, response = pcall(function()
         return game:HttpGet(url)
@@ -37,8 +24,6 @@ if url then
     if success then
         loadstring(response)()
     else
-        sendNotification("Error", "Failed to load script from URL: " .. url)
     end
 else
-    sendNotification("Error", "No URL found for the current game.") -- h
 end
